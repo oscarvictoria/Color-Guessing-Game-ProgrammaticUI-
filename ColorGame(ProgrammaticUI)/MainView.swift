@@ -18,7 +18,7 @@ class MainView: UIView {
     
     public lazy var greenButton: UIButton = {
         let green = UIButton()
-        green.tag = 3
+        green.tag = 2
         green.backgroundColor = .systemGreen
         green.isEnabled = true
         return green
@@ -26,7 +26,7 @@ class MainView: UIView {
     
     public lazy var blueButton: UIButton = {
         let blue = UIButton()
-        blue.tag = 2
+        blue.tag = 1
         blue.backgroundColor = .systemBlue
         blue.isEnabled = true
         return blue
@@ -34,7 +34,7 @@ class MainView: UIView {
     
     public lazy var redButton: UIButton = {
         let red = UIButton()
-        red.tag = 3
+        red.tag = 0
         red.backgroundColor = .systemRed
         red.isEnabled = true
         return red

@@ -13,6 +13,7 @@
 		BEE3049123E0E35800EE82CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE3049023E0E35800EE82CE /* Assets.xcassets */; };
 		BEE3049423E0E35800EE82CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE3049223E0E35800EE82CE /* LaunchScreen.storyboard */; };
 		BEE3049C23E0E77200EE82CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3049B23E0E77200EE82CE /* MainView.swift */; };
+		BEE3049E23E1246300EE82CE /* ColorGuessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3049D23E1246300EE82CE /* ColorGuessingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BEE3049323E0E35800EE82CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEE3049523E0E35800EE82CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEE3049B23E0E77200EE82CE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BEE3049D23E1246300EE82CE /* ColorGuessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGuessingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BEE3048723E0E35600EE82CE /* AppDelegate.swift */,
 				BEE3048923E0E35600EE82CE /* SceneDelegate.swift */,
 				BEE3048B23E0E35600EE82CE /* ViewController.swift */,
+				BEE3049D23E1246300EE82CE /* ColorGuessingModel.swift */,
 				BEE3049B23E0E77200EE82CE /* MainView.swift */,
 				BEE3049023E0E35800EE82CE /* Assets.xcassets */,
 				BEE3049223E0E35800EE82CE /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE3048C23E0E35600EE82CE /* ViewController.swift in Sources */,
+				BEE3049E23E1246300EE82CE /* ColorGuessingModel.swift in Sources */,
 				BEE3049C23E0E77200EE82CE /* MainView.swift in Sources */,
 				BEE3048823E0E35600EE82CE /* AppDelegate.swift in Sources */,
 				BEE3048A23E0E35600EE82CE /* SceneDelegate.swift in Sources */,

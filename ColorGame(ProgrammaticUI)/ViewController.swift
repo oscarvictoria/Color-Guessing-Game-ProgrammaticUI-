@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var colors = ColorGuessingModel()
+    
     private var mainView = MainView()
     
     override func loadView() {
@@ -28,31 +30,58 @@ class ViewController: UIViewController {
     }
     
     func configureColor() {
-        mainView.greenButton.addTarget(self, action: #selector(changeColor(sender:)) , for: .touchUpInside)
-        mainView.redButton.addTarget(self, action: #selector(changeRed(sender:)) , for: .touchUpInside)
-        mainView.blueButton.addTarget(self, action: #selector(changeBlue(sender:)) , for: .touchUpInside)
         mainView.resetButton.addTarget(self, action: #selector(reset(sender:)) , for: .touchUpInside)
-    }
-    
-    private func getRandomColor() {
+         mainView.redButton.addTarget(self, action: #selector(buttonPressed(sender:)) , for: .touchUpInside)
+        mainView.blueButton.addTarget(self, action: #selector(buttonPressed(sender:)) , for: .touchUpInside)
+         mainView.greenButton.addTarget(self, action: #selector(buttonPressed(sender:)) , for: .touchUpInside)
         
     }
+
+
     
 
     @objc
-       private func changeColor(sender: UIButton) {
-        mainView.randomColorView.backgroundColor = mainView.greenButton.backgroundColor
+       private func buttonPressed(sender: UIButton) {
+        
+        let randNum =  CGFloat.random(in: 0...1)
+        let randNum2 = CGFloat.random(in: 0...1)
+        let randNum3 = CGFloat.random(in: 0...1)
+        let randNum4 = CGFloat.random(in: 0...1)
+
+        let myColor = UIColor(red: randNum, green: randNum2, blue: randNum3, alpha: randNum4)
+        let array = [randNum, randNum2, randNum3]
+        let mostColor = array.max()
+
+        mainView.randomColorView.backgroundColor = myColor
+
+            switch sender.tag {
+            case 0:
+                if mostColor == randNum  {
+                    mainView.statusLabel.text = "Correct"
+                } else {
+                mainView.statusLabel.text = "Wrong"
+                }
+            case 1:
+                if mostColor == randNum2 {
+                    mainView.statusLabel.text = "Correct"
+                } else {
+                    mainView.statusLabel.text = "Wrong"
+                }
+            case 2:
+                if mostColor == randNum3 {
+                    mainView.statusLabel.text = "Correct"
+                } else {
+                    mainView.statusLabel.text = "Wrong"
+                }
+            default:
+                mainView.statusLabel.text = "unknown"
+            }
+        
+        
+    
        }
     
-    @objc
-    private func changeRed(sender: UIButton) {
-        mainView.randomColorView.backgroundColor = mainView.redButton.backgroundColor
-    }
-    
-    @objc
-    private func changeBlue(sender: UIButton) {
-        mainView.randomColorView.backgroundColor = mainView.blueButton.backgroundColor
-    }
+
     
     @objc
     private func reset(sender: UIButton) {
